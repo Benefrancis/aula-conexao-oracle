@@ -13,3 +13,4 @@ spring:
       dialect: org.hibernate.dialect.Oracle10gDialect
       ddl-auto: update
    show-sql: true
+ 

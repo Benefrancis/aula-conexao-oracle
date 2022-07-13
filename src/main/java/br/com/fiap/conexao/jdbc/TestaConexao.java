@@ -1,4 +1,4 @@
-package br.com.fiap.conexao.inicio;
+package br.com.fiap.conexao.jdbc;
 
 import java.sql.ResultSet;
 import java.sql.SQLException;
@@ -11,8 +11,8 @@ public class TestaConexao {
 
 	public static void main(String[] args) {
 
-		save(getDados());
-
+		Pessoa p = getDados();
+		save(p);
 		findAll();
 
 	}
@@ -31,7 +31,7 @@ public class TestaConexao {
 			System.out.println("Informe o Sobrenome:");
 			sobrenome = sc.nextLine();
 		}
-		
+
 		sc.close();
 		return new Pessoa(null, nome.toUpperCase().trim(), sobrenome.toUpperCase().trim());
 	}
